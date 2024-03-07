@@ -182,6 +182,57 @@ namespace TestClass
                 Assert.That(expected, Is.EqualTo(actual));
 
             }
+            [Test]
+            public void AnalyzeTriangle_Input0and40and50_OutputInvalidTriangleOneSideZero()
+            {
+                //Arrange
+                int firstSide = 0;
+                int secondSide = 40;
+                int thirdSide = 50;
+
+                string expected = "Invalid Triangle - a zero has been detected";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(expected, Is.EqualTo(actual));
+
+            }
+            [Test]
+            public void AnalyzeTriangle_Input0and0and50_OutputInvalidTriangleTwoSideZero()
+            {
+                //Arrange
+                int firstSide = 0;
+                int secondSide = 0;
+                int thirdSide = 50;
+
+                string expected = "Invalid Triangle - a zero has been detected";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(expected, Is.EqualTo(actual));
+
+            }
+            [Test]
+            public void AnalyzeTriangle_Input0and0and0_OutputInvalidTriangleThreeSideZero()
+            {
+                //Arrange
+                int firstSide = 0;
+                int secondSide = 0;
+                int thirdSide = 0;
+
+                string expected = "Invalid Triangle - a zero has been detected";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(expected, Is.EqualTo(actual));
+
+            }
 
         }
     }
